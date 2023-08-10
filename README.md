@@ -70,55 +70,63 @@ ShortenerLaravelGraphQL provides a GraphQL API endpoint for creating short links
 
 ## GraphQL
 
-| Query/Mutation       | Description                                        |
-|----------------------|----------------------------------------------------|
-| `allLinks`           | Get a list of all short links.                    |
-| `link`               | Get details of a specific short link.             |
-| `redirectLink`       | Redirect a short link to its original URL.        |
-| `createShortLink`    | Create a new short link.                          |
-| `updateShortLink`    | Update details of an existing short link.        |
-| `deleteShortLink`    | Delete a short link.                              |
-| `allUsers`           | Get a list of all users.                          |
-| `user`               | Get details of a specific user.                   |
-| `createUser`         | Create a new user.                                |
-| `updateUser`         | Update details of an existing user.              |
-| `deleteUser`         | Delete a user.                                    |
-| `linkVisitStats`     | Get statistics for visits to a short link.       |
-| `userLinkStats`      | Get statistics for a user's short links.         |
-| `topVisitedLinks`    | Get a list of top visited short links.           |
-| `searchLinks`        | Search for short links based on criteria.       |
-| `createUserSession`  | Create a new user session.                        |
-| `deleteUserSession`  | Delete a user session.                            |
-| `createBookmark`     | Create a bookmark for a user.                   |
-| `deleteBookmark`     | Delete a user's bookmark.                        |
-| `likeLink`           | Like a short link.                               |
-| `unlikeLink`         | Remove a like from a short link.                |
-| `addComment`         | Add a comment to a short link.                   |
-| `updateComment`      | Update a comment on a short link.               |
-| `deleteComment`      | Delete a comment from a short link.              |
-| `rateLink`           | Rate a short link.                               |
-| `updateRating`       | Update a user's rating for a short link.        |
-| `deleteRating`       | Delete a user's rating for a short link.        |
-| `flagLink`           | Flag a short link for review.                   |
-| `unflagLink`         | Remove a flag from a short link.                |
-| `reportLink`         | Report an issue with a short link.              |
-| `createCategory`     | Create a new category for short links.          |
-| `updateCategory`     | Update details of an existing category.        |
-| `deleteCategory`     | Delete a category.                               |
-| `addLinkToCategory`  | Add a short link to a category.                 |
-| `removeLinkFromCategory` | Remove a short link from a category.         |
-| `searchCategories`   | Search for categories based on criteria.       |
-| `createTag`          | Create a new tag for short links.               |
-| `updateTag`          | Update details of an existing tag.             |
-| `deleteTag`          | Delete a tag.                                     |
-| `addTagToLink`       | Add a tag to a short link.                      |
-| `removeTagFromLink`  | Remove a tag from a short link.                 |
-| `searchTags`         | Search for tags based on criteria.             |
-| `createReport`       | Create a new report for a short link.           |
-| `updateReport`       | Update details of an existing report.         |
-| `deleteReport`       | Delete a report.                                 |
-| `approveLink`        | Approve a flagged short link.                   |
-| `rejectLink`         | Reject a flagged short link.                     |
+| Query/Mutation       | Description                                        | Examples                                             |
+|----------------------|----------------------------------------------------|------------------------------------------------------|
+| `allLinks`           | Get a list of all short links.                    | `{ allLinks { id, short_code, original_url } }`      |
+| `link`               | Get details of a specific short link.             | `{ link(id: "abc123") { id, short_code, original_url } }` |
+| `redirectLink`       | Redirect a short link to its original URL.        | (N/A)                                                |
+| `createShortLink`    | Create a new short link.                          | `{ createShortLink(url: "https://www.example.com") { id, short_code, original_url } }` |
+| `updateShortLink`    | Update details of an existing short link.        | `{ updateShortLink(id: "abc123", original_url: "https://newurl.com") { id, short_code, original_url } }` |
+| `deleteShortLink`    | Delete a short link.                              | `{ deleteShortLink(id: "abc123") }`                 |
+| `allUsers`           | Get a list of all users.                          | `{ allUsers { id, username, email } }`              |
+| `user`               | Get details of a specific user.                   | `{ user(id: "user123") { id, username, email } }`   |
+| `createUser`         | Create a new user.                                | `{ createUser(username: "newuser", email: "new@example.com") { id, username, email } }` |
+| `updateUser`         | Update details of an existing user.              | `{ updateUser(id: "user123", email: "updated@example.com") { id, username, email } }` |
+| `deleteUser`         | Delete a user.                                    | `{ deleteUser(id: "user123") }`                    |
+| `linkVisitStats`     | Get statistics for visits to a short link.       | `{ linkVisitStats(shortCode: "abc123") { total_visits, unique_visits } }` |
+| `userLinkStats`      | Get statistics for a user's short links.         | `{ userLinkStats(userId: "user123") { total_links, total_visits } }` |
+| `topVisitedLinks`    | Get a list of top visited short links.           | `{ topVisitedLinks(limit: 10) { id, short_code, original_url, total_visits } }` |
+| `searchLinks`        | Search for short links based on criteria.       | `{ searchLinks(keyword: "example", limit: 5) { id, short_code, original_url } }` |
+| `createUserSession`  | Create a new user session.                        | `{ createUserSession(userId: "user123") { id, token, created_at } }` |
+| `deleteUserSession`  | Delete a user session.                            | `{ deleteUserSession(sessionId: "sess123") }`       |
+| `createBookmark`     | Create a bookmark for a user.                   | `{ createBookmark(userId: "user123", linkId: "abc123") { id, user_id, link_id } }` |
+| `deleteBookmark`     | Delete a user's bookmark.                        | `{ deleteBookmark(userId: "user123", linkId: "abc123") }` |
+| `likeLink`           | Like a short link.                               | `{ likeLink(userId: "user123", linkId: "abc123") { id, user_id, link_id } }` |
+| `unlikeLink`         | Remove a like from a short link.                | `{ unlikeLink(userId: "user123", linkId: "abc123") }` |
+| `addComment`         | Add a comment to a short link.                   | `{ addComment(userId: "user123", linkId: "abc123", text: "Great link!") { id, user_id, link_id, text } }` |
+| `updateComment`      | Update a comment on a short link.               | `{ updateComment(commentId: "comm123", text: "Updated comment.") { id, user_id, link_id, text } }` |
+| `deleteComment`      | Delete a comment from a short link.              | `{ deleteComment(commentId: "comm123") }`          |
+| `rateLink`           | Rate a short link.                               | `{ rateLink(userId: "user123", linkId: "abc123", rating: 4) { id, user_id, link_id, rating } }` |
+| `updateRating`       | Update a user's rating for a short link.        | `{ updateRating(userId: "user123", linkId: "abc123", rating: 5) { id, user_id, link_id, rating } }` |
+| `deleteRating`       | Delete a user's rating for a short link.        | `{ deleteRating(userId: "user123", linkId: "abc123") }` |
+| `flagLink`           | Flag a short link for review.                   | `{ flagLink(userId: "user123", linkId: "abc123", reason: "Inappropriate content") { id, user_id, link_id, reason } }` |
+| `unflagLink`         | Remove a flag from a short link.                | `{ unflagLink(userId: "user123", linkId: "abc123") }` |
+| `reportLink`         | Report an issue with a short link.              | `{ reportLink(userId: "user123", linkId: "abc123", issue: "Broken link") { id, user_id, link_id, issue } }` |
+| `createCategory`     | Create a new category for short links.          | `{ createCategory(name: "News") { id, name } }`    |
+| `updateCategory`     | Update details of an existing category.        | `{ updateCategory(categoryId: "cat123", name: "Updated Category") { id, name } }` |
+| `deleteCategory`     | Delete a category.                               | `{ deleteCategory(categoryId: "cat123") }`         |
+| `addLinkToCategory`  | Add a short link to a category.                 | `{ addLinkToCategory(categoryId: "cat123", linkId: "abc123") { id, category_id, link_id } }` |
+| `removeLinkFromCategory` | Remove a short link from a category.         | `{ removeLinkFromCategory(categoryId: "cat123", linkId: "abc123") }` |
+| `searchCategories`   | Search for categories based on criteria.       | `{ searchCategories(keyword: "news", limit: 3) { id, name } }` |
+| `createTag`          | Create a new tag for short links.               | `{ createTag(name: "technology") { id, name } }`    |
+| `updateTag`          | Update details of an existing tag.             | `{ updateTag(tagId: "tag123", name: "Updated Tag") { id, name } }` |
+| `deleteTag`          | Delete a tag.                                     | `{ deleteTag(tagId: "tag123") }`                   |
+| `addTagToLink`       | Add a tag to a short link.                      | `{ addTagToLink(tagId: "tag123", linkId: "abc123") { id, tag_id, link_id } }` |
+| `removeTagFromLink`  | Remove a tag from a short link.                 | `{ removeTagFromLink(tagId: "tag123", linkId: "abc123") }` |
+| `searchTags`         | Search for tags based on criteria.             | `{ searchTags(keyword: "tech", limit: 2) { id, name } }` |
+| `createReport`       | Create a new report for a short link.           | `{ createReport(userId: "user123", linkId: "abc123", issue: "Spam") { id, user_id, link_id, issue } }` |
+| `updateReport`       | Update details of an existing report.         | `{ updateReport(reportId: "rep123", issue: "Inaccurate information") { id, user_id, link_id, issue } }` |
+| `deleteReport`       | Delete a report.                                 | `{ deleteReport(reportId: "rep123") }`             |
+| `approveLink`        | Approve a flagged short link.                   | `{ approveLink(linkId: "abc123") }`                |
+| `rejectLink`         | Reject a flagged short link.                     | `{ rejectLink(linkId: "abc123", reason: "Low quality content") }` |
+| `createNotification` | Create a new notification for a user.         | `{ createNotification(userId: "user123", message: "New update!") { id, message, created_at } }` |
+| `markAsRead`         | Mark a notification as read for a user.       | `{ markAsRead(notificationId: "notif123") }`        |
+| `deleteNotification` | Delete a notification for a user.             | `{ deleteNotification(notificationId: "notif123") }` |
+| `createSubscription` | Create a subscription for updates.           | `{ createSubscription(userId: "user123") { id, user_id, created_at } }` |
+| `cancelSubscription` | Cancel a subscription for a user.             | `{ cancelSubscription(userId: "user123") }`        |
+| `updateSettings`     | Update user-specific settings.               | `{ updateSettings(userId: "user123", theme: "dark") }` |
+| `resetPassword`      | Initiate the password reset process.         | `{ resetPassword(email: "user@example.com") }`      |
+| `changePassword`     | Change the user's password.                  | `{ changePassword(userId: "user123", newPassword: "newpass123") }` |
 
 ## Contributing
 
