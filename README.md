@@ -1,4 +1,4 @@
-# ShortenerLaravelGraphQL
+# URL Shortener Laravel GraphQL
 
 ShortenerLaravelGraphQL is a GraphQL-based web service developed using PHP 8.2 and Laravel 10. This project aims to provide a URL shortening service with a GraphQL API interface, making it easy to create short links and retrieve original URLs using GraphQL queries.
 
