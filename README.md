@@ -70,6 +70,55 @@ ShortenerLaravelGraphQL provides a GraphQL API endpoint for creating short links
 
 ## GraphQL
 
+| Query/Mutation       | Description                                        |
+|----------------------|----------------------------------------------------|
+| `allLinks`           | Get a list of all short links.                    |
+| `link`               | Get details of a specific short link.             |
+| `redirectLink`       | Redirect a short link to its original URL.        |
+| `createShortLink`    | Create a new short link.                          |
+| `updateShortLink`    | Update details of an existing short link.        |
+| `deleteShortLink`    | Delete a short link.                              |
+| `allUsers`           | Get a list of all users.                          |
+| `user`               | Get details of a specific user.                   |
+| `createUser`         | Create a new user.                                |
+| `updateUser`         | Update details of an existing user.              |
+| `deleteUser`         | Delete a user.                                    |
+| `linkVisitStats`     | Get statistics for visits to a short link.       |
+| `userLinkStats`      | Get statistics for a user's short links.         |
+| `topVisitedLinks`    | Get a list of top visited short links.           |
+| `searchLinks`        | Search for short links based on criteria.       |
+| `createUserSession`  | Create a new user session.                        |
+| `deleteUserSession`  | Delete a user session.                            |
+| `createBookmark`     | Create a bookmark for a user.                   |
+| `deleteBookmark`     | Delete a user's bookmark.                        |
+| `likeLink`           | Like a short link.                               |
+| `unlikeLink`         | Remove a like from a short link.                |
+| `addComment`         | Add a comment to a short link.                   |
+| `updateComment`      | Update a comment on a short link.               |
+| `deleteComment`      | Delete a comment from a short link.              |
+| `rateLink`           | Rate a short link.                               |
+| `updateRating`       | Update a user's rating for a short link.        |
+| `deleteRating`       | Delete a user's rating for a short link.        |
+| `flagLink`           | Flag a short link for review.                   |
+| `unflagLink`         | Remove a flag from a short link.                |
+| `reportLink`         | Report an issue with a short link.              |
+| `createCategory`     | Create a new category for short links.          |
+| `updateCategory`     | Update details of an existing category.        |
+| `deleteCategory`     | Delete a category.                               |
+| `addLinkToCategory`  | Add a short link to a category.                 |
+| `removeLinkFromCategory` | Remove a short link from a category.         |
+| `searchCategories`   | Search for categories based on criteria.       |
+| `createTag`          | Create a new tag for short links.               |
+| `updateTag`          | Update details of an existing tag.             |
+| `deleteTag`          | Delete a tag.                                     |
+| `addTagToLink`       | Add a tag to a short link.                      |
+| `removeTagFromLink`  | Remove a tag from a short link.                 |
+| `searchTags`         | Search for tags based on criteria.             |
+| `createReport`       | Create a new report for a short link.           |
+| `updateReport`       | Update details of an existing report.         |
+| `deleteReport`       | Delete a report.                                 |
+| `approveLink`        | Approve a flagged short link.                   |
+| `rejectLink`         | Reject a flagged short link.                     |
 
 ## Contributing
 
