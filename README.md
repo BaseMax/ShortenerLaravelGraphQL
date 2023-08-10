@@ -128,6 +128,112 @@ ShortenerLaravelGraphQL provides a GraphQL API endpoint for creating short links
 | `resetPassword`      | Initiate the password reset process.         | `{ resetPassword(email: "user@example.com") }`      |
 | `changePassword`     | Change the user's password.                  | `{ changePassword(userId: "user123", newPassword: "newpass123") }` |
 
+## Database Scheme
+
+### Table: users
+- `id` (Primary Key)
+- `username` (Unique)
+- `email` (Unique)
+- `password`
+- `created_at`
+- `updated_at`
+
+### Table: links
+- `id` (Primary Key)
+- `user_id` (Foreign Key to `users`)
+- `short_code` (Unique)
+- `original_url`
+- `total_visits`
+- `created_at`
+- `updated_at`
+
+### Table: link_likes
+- `id` (Primary Key)
+- `user_id` (Foreign Key to `users`)
+- `link_id` (Foreign Key to `links`)
+- `created_at`
+- `updated_at`
+
+### Table: link_comments
+- `id` (Primary Key)
+- `user_id` (Foreign Key to `users`)
+- `link_id` (Foreign Key to `links`)
+- `text`
+- `created_at`
+- `updated_at`
+
+### Table: link_ratings
+- `id` (Primary Key)
+- `user_id` (Foreign Key to `users`)
+- `link_id` (Foreign Key to `links`)
+- `rating`
+- `created_at`
+- `updated_at`
+
+### Table: link_flags
+- `id` (Primary Key)
+- `user_id` (Foreign Key to `users`)
+- `link_id` (Foreign Key to `links`)
+- `reason`
+- `created_at`
+- `updated_at`
+
+### Table: link_reports
+- `id` (Primary Key)
+- `user_id` (Foreign Key to `users`)
+- `link_id` (Foreign Key to `links`)
+- `issue`
+- `created_at`
+- `updated_at`
+
+### Table: categories
+- `id` (Primary Key)
+- `name` (Unique)
+- `created_at`
+- `updated_at`
+
+### Table: category_links
+- `id` (Primary Key)
+- `category_id` (Foreign Key to `categories`)
+- `link_id` (Foreign Key to `links`)
+
+### Table: tags
+- `id` (Primary Key)
+- `name` (Unique)
+- `created_at`
+- `updated_at`
+
+### Table: link_tags
+- `id` (Primary Key)
+- `tag_id` (Foreign Key to `tags`)
+- `link_id` (Foreign Key to `links`)
+
+### Table: notifications
+- `id` (Primary Key)
+- `user_id` (Foreign Key to `users`)
+- `message`
+- `read` (Boolean)
+- `created_at`
+- `updated_at`
+
+### Table: user_sessions
+- `id` (Primary Key)
+- `user_id` (Foreign Key to `users`)
+- `token`
+- `created_at`
+- `updated_at`
+
+### Table: bookmarks
+- `id` (Primary Key)
+- `user_id` (Foreign Key to `users`)
+- `link_id` (Foreign Key to `links`)
+
+### Table: subscriptions
+- `id` (Primary Key)
+- `user_id` (Foreign Key to `users`)
+- `created_at`
+- `updated_at`
+
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to ShortenerLaravelGraphQL, please follow these steps:
