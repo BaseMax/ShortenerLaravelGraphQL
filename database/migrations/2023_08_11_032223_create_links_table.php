@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger("user_id");
             $table->string("short_code")->unique();
             $table->string("original_url");
-            $table->integer("total_visits");
+            $table->integer("total_visits")->default(0);
             $table->timestamps();
 
             $table->foreign("user_id")->references("id")->on("users")->cascadeOnDelete()->cascadeOnUpdate();

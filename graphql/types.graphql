@@ -1,0 +1,128 @@
+type Link {
+    id: ID!
+    user: User! @belongsTo
+    short_code: String!
+    original_url: String!
+    total_visits: Int!
+    created_at: String
+    updated_at: String
+    likes: [Like]! @hasMany
+    comments: [Comment]! @hasMany
+    rates: [Rate]! @hasMany
+    flags: [Flag]! @hasMany
+    reports: [Report]! @hasMany
+    category: Category! @belongsTo
+    tags: [Tag]! @hasMany
+    bookmarks: [Bookmark]! @hasMany
+}
+
+type User {
+    id: ID!
+    username: String!
+    email: String!
+    password: String!
+    created_at: String
+    updated_at: String
+    links: [Link]! @hasMany
+    likes: [Like]! @hasMany
+    comments: [Comment]! @hasMany
+    rates: [Rate]! @hasMany
+    flags: [Flag]! @hasMany
+    reports: [Report]! @hasMany
+    notifications: [Notification]! @hasMany
+    sessions: [Session]! @hasMany
+    bookmarks: [Bookmark]! @hasMany
+    subscriptions: [Subscription]! @hasMany
+}
+
+type Like {
+    id: ID!
+    user: User! @belongsTo
+    link: Link! @belongsTo
+    created_at: String
+    updated_at: String
+}
+
+type Comment {
+    id: ID!
+    user: User! @belongsTo
+    link: Link! @belongsTo
+    text: String!
+    created_at: String
+    updated_at: String
+}
+
+type Rate {
+    id: ID!
+    user: User! @belongsTo
+    link: Link! @belongsTo
+    rating: Int!
+    created_at: String
+    updated_at: String
+}
+
+type Flag {
+    id: ID!
+    user: User! @belongsTo
+    link: Link! @belongsTo
+    reason: String!
+    created_at: String
+    updated_at: String
+}
+
+type Report {
+    id: ID!
+    user: User! @belongsTo
+    link: Link! @belongsTo
+    issue: String!
+    created_at: String
+    updated_at: String
+}
+
+type Category {
+    id: ID!
+    name: String!
+    created_at: String
+    updated_at: String
+    links: [Link]! @hasMany
+}
+
+type Tag {
+    id: ID!
+    name: String!
+    created_at: String
+    updated_at: String
+    links: [Link]! @hasMany
+}
+
+type Notification {
+    id: ID!
+    user: User! @belongsTo
+    message: String!
+    read: Boolean!
+    created_at: String
+    updated_at: String
+}
+
+type Session {
+    id: ID!
+    user: User! @belongsTo
+    token: String!
+    created_at: String
+    updated_at: String
+}
+
+type Bookmark {
+    id: ID!
+    user: User! @belongsTo
+    link: Link! @belongsTo
+    created_at: String
+    updated_at: String
+}
+
+type Subscription {
+    id: ID!
+    user: User! @belongsTo
+    created_at: String
+    updated_at: String
+}
