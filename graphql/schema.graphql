@@ -8,3 +8,4 @@
 #import rate.graphql
 #import flag.graphql
 #import report.graphql
+#import category.graphql
