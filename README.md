@@ -4,9 +4,9 @@ ShortenerLaravelGraphQL is a GraphQL-based web service developed using PHP 8.2 a
 
 ## Features
 
-- URL shortening: Generate short URLs from long URLs.
-- URL redirection: Redirect short URLs to their original long URLs.
-- GraphQL API: Intuitive API for creating short links and retrieving original URLs.
+- **URL shortening:** Generate short URLs from long URLs.
+- **URL redirection:** Redirect short URLs to their original long URLs.
+- **GraphQL API:** Intuitive API for creating short links and retrieving original URLs.
 
 ## Prerequisites
 
