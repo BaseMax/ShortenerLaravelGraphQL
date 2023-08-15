@@ -1,0 +1,3 @@
+extend type Mutation {
+    likeLink(userId: ID!, linkId: ID!): Like
+}
