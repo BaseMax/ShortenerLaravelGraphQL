@@ -1,3 +1,8 @@
 extend type Mutation {
     createBookmark(userId: ID!, linkId: ID!): Bookmark
+    deleteBookmark(id: ID! @eq): Bookmark @delete
+}
+
+extend type Query {
+    allBookmarks: [Bookmark]! @all
 }

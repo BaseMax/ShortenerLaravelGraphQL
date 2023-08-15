@@ -11,7 +11,7 @@ type Link {
     rates: [Rate]! @hasMany
     flags: [Flag]! @hasMany
     reports: [Report]! @hasMany
-    category: Category! @belongsTo
+    category: Category! @belongsToMany
     tags: [Tag]! @hasMany
     bookmarks: [Bookmark]! @hasMany
 }
