@@ -1,3 +1,4 @@
 extend type Query {
     allUsers: [User]! @all
+    user(id: ID! @eq): User @find
 }
