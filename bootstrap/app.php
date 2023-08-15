@@ -41,12 +41,15 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
-// $app->configure('lighthouse');
+$app->register(
+    \Nuwave\Lighthouse\Subscriptions\SubscriptionServiceProvider::class
+    );
 
 // $app->register(\Nuwave\Lighthouse\LighthouseServiceProvider::class);
 // $app->register(\Nuwave\Lighthouse\Pagination\PaginationServiceProvider::class);
 // $app->register(\Nuwave\Lighthouse\Validation\ValidationServiceProvider::class);
 
+// $app->configure('lighthouse');
 
 /*
 |--------------------------------------------------------------------------

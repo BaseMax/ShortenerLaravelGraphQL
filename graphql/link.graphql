@@ -1,0 +1,10 @@
+extend type Query {
+    allLinks: [Link]! @all
+    link(id: ID! @eq): Link @find
+}
+
+extend type Mutation {
+    createShortLink(url: String!, user_id: ID!): Link
+    updateShortLink(id: ID!, original_url: String!): Link
+    deleteShortLink(id: ID! @eq): Link @delete
+}
