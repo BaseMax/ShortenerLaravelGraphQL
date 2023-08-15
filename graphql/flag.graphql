@@ -1,0 +1,4 @@
+extend type Mutation {
+    flagLink(userId: ID!, linkId: ID!, reason: String!): Flag
+    unflagLink(id: ID! @eq): Flag @delete
+}

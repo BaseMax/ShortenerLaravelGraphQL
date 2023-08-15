@@ -6,3 +6,5 @@
 #import like.graphql
 #import comment.graphql
 #import rate.graphql
+#import flag.graphql
+#import report.graphql

@@ -1,0 +1,3 @@
+extend type Mutation {
+    reportLink(userId: ID!, linkId: ID!, issue: String!): Report
+}
