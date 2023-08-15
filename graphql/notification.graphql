@@ -1,0 +1,5 @@
+extend type Mutation {
+    createNotification(userId: ID!, message: String!): Notification
+    markAsRead(notificationId: ID!): Notification
+    deleteNotification(id: ID! @eq): Notification @delete
+}

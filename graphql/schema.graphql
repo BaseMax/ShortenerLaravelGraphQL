@@ -9,3 +9,5 @@
 #import flag.graphql
 #import report.graphql
 #import category.graphql
+#import tag.graphql
+#import notification.graphql

@@ -1,3 +1,5 @@
 extend type Mutation {
     reportLink(userId: ID!, linkId: ID!, issue: String!): Report
+    updateReport(id: ID! @eq, issue: String!): Report @update
+    deleteReport(id: ID! @eq): Report @delete
 }
