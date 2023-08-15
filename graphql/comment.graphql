@@ -1,0 +1,5 @@
+extend type Mutation {
+    addComment(userId: ID!, linkId: ID!, text: String!): Comment
+    updateComment(id: ID! @eq, text: String!): Comment @update
+    deleteComment(id: ID! @eq): Comment @delete
+}

@@ -4,3 +4,4 @@
 #import session.graphql
 #import bookmark.graphql
 #import like.graphql
+#import comment.graphql

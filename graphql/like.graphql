@@ -1,3 +1,4 @@
 extend type Mutation {
     likeLink(userId: ID!, linkId: ID!): Like
+    unlikeLink(id: ID! @eq): Like @delete
 }
