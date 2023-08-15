@@ -1,0 +1,5 @@
+extend type Mutation {
+    rateLink(userId: ID!, linkId: ID!, rating: Int!): Rate
+    updateRating(id: ID! @eq, rating: Int!): Rate @update
+    deleteRating(id: ID! @eq): Rate @delete
+}

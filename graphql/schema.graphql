@@ -5,3 +5,4 @@
 #import bookmark.graphql
 #import like.graphql
 #import comment.graphql
+#import rate.graphql
