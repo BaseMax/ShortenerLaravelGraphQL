@@ -2,3 +2,4 @@
 #import link.graphql
 #import user.graphql
 #import session.graphql
+#import bookmark.graphql

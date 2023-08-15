@@ -1,0 +1,3 @@
+extend type Mutation {
+    createBookmark(userId: ID!, linkId: ID!): Bookmark
+}

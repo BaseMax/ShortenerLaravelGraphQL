@@ -1,3 +1,4 @@
 extend type Mutation {
     createUserSession(userId: ID!): Session
+    deleteUserSession(id: ID! @eq): Session @delete
 }
