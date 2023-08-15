@@ -1,6 +1,8 @@
 extend type Query {
     allLinks: [Link]! @all
     link(id: ID! @eq): Link @find
+    linkVisitStats(shortCode:String!): Int
+    topVisitedLinks: [Link]! 
 }
 
 extend type Mutation {
