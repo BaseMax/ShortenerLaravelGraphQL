@@ -1,4 +1,4 @@
-# URL Shortener Laravel GraphQL
+![Screenshot from 2023-08-15 10-40-05](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/44795a12-1026-4945-810f-f9d427a2dffe)# URL Shortener Laravel GraphQL
 
 ShortenerLaravelGraphQL is a GraphQL-based web service developed using PHP 8.2 and Laravel 10. This project aims to provide a URL shortening service with a GraphQL API interface, making it easy to create short links and retrieve original URLs using GraphQL queries.
 
@@ -233,6 +233,81 @@ ShortenerLaravelGraphQL provides a GraphQL API endpoint for creating short links
 - `user_id` (Foreign Key to `users`)
 - `created_at`
 - `updated_at`
+
+Examples:
+
+![Screenshot from 2023-08-15 10-08-58](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/7fe769c4-4438-4b66-8ea8-6251d286f8a4)
+
+![Screenshot from 2023-08-15 10-11-15](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/33361dc4-5a38-48c8-ae6c-465a36ae3799)
+
+![Screenshot from 2023-08-15 10-18-52](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/3f634362-04d5-4999-8387-e9ff215279e1)
+
+![Screenshot from 2023-08-15 10-24-51](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/079f4b64-195b-427e-b7ba-850f2b4fb33f)
+
+![Screenshot from 2023-08-15 10-40-05](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/d301d22e-db6d-40b6-9f4a-344e6bc14be0)
+
+![Screenshot from 2023-08-15 10-52-07](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/10a68317-5247-42ca-b930-c2cffa45ff0c)
+
+![Screenshot from 2023-08-15 10-54-11](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/4f7c948a-b7da-45be-86c0-74e1ac7727ef)
+
+![Screenshot from 2023-08-15 10-55-29](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/513a438f-043c-42b0-90c7-507516a274ad)
+
+![Screenshot from 2023-08-15 11-08-10](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/83194ea4-c5de-499c-97f7-ff1e94598751)
+
+![Screenshot from 2023-08-15 11-09-46](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/41b77b81-078a-4ab2-aa85-592bb02adce9)
+
+![Screenshot from 2023-08-15 11-26-31](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/5352a0e8-1f9b-49c5-b5d6-a76929f803ee)
+
+![Screenshot from 2023-08-15 11-56-28](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/d893b7d7-3883-48e2-bb01-a7b0a019e20b)
+
+![Screenshot from 2023-08-15 11-56-51](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/7dfc74c3-aa90-446a-a5a9-2a0788c76ece)
+
+![Screenshot from 2023-08-15 12-33-33](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/e4afe21e-cf25-4c09-8f44-e7c503ddce0c)
+
+![Screenshot from 2023-08-15 12-34-01](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/7594ea8f-e21a-4075-b8cd-6376e2b03826)
+
+![Screenshot from 2023-08-15 12-48-41](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/35eb1a61-fd91-42a0-9aad-22e7c78d8111)
+
+![Screenshot from 2023-08-15 12-49-14](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/957c5d7d-0748-4783-92c3-08dc126249d4)
+
+![Screenshot from 2023-08-15 12-50-06](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/62f90d5f-2f2f-46af-a8f0-0ffc5debdad4)
+
+![Screenshot from 2023-08-15 12-50-33](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/04822aa7-2b38-4a5f-8853-0538194f4862)
+
+![Screenshot from 2023-08-15 13-13-36](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/3b4abc4a-c7b7-48b9-9e12-30738bc27179)
+
+![Screenshot from 2023-08-15 13-13-56](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/05777409-c771-4c02-a074-0e561a5b5446)
+
+![Screenshot from 2023-08-15 13-14-28](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/da5af46e-6733-45fd-b8bb-955ee6ccb2eb)
+
+![Screenshot from 2023-08-15 15-38-34](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/7edec46e-e193-4637-88fa-e9bd56d3b0ed)
+
+![Screenshot from 2023-08-15 15-41-12](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/2603a187-b937-4bd6-83b9-4060b5508846)
+
+![Screenshot from 2023-08-15 16-05-48](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/7cf12205-8c26-4b0d-a416-878a5d5af754)
+
+![Screenshot from 2023-08-15 16-25-35](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/f102080a-a20c-4221-89f8-c7d9056069c8)
+
+![Screenshot from 2023-08-15 16-28-03](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/3a965de4-5cc0-4733-806b-da177add8e7d)
+
+![Screenshot from 2023-08-15 17-05-20](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/5b1cf1a5-cbd8-4554-a396-0643d9a3796c)
+
+![Screenshot from 2023-08-15 17-07-17](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/33479691-f8e0-4418-b4f9-442ffd2a8673)
+
+![Screenshot from 2023-08-15 17-24-16](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/90161c2a-6c58-4fc8-a895-ff08fe2ddd44)
+
+![Screenshot from 2023-08-15 17-51-41](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/4f5d4ef4-1021-4e39-a8e9-05133193f9f3)
+
+![Screenshot from 2023-08-15 18-11-27](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/381e53b0-42a5-4acf-ae85-beb29351c7de)
+
+![Screenshot from 2023-08-15 18-26-36](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/c07f19e0-2e74-4b66-bd3b-0f5e0c63b445)
+
+![Screenshot from 2023-08-15 18-32-04](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/e09886d9-7dd7-4975-b912-a7b94fc16b8e)
+
+![Screenshot from 2023-08-15 18-33-24](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/4ac52d22-f703-4ea3-a472-d5ec24d1966f)
+
+![Screenshot from 2023-08-15 20-11-57](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/030de49c-a079-40bd-a518-ecf8e7d85f6d)
+
 
 ## Contributing
 
