@@ -234,7 +234,7 @@ ShortenerLaravelGraphQL provides a GraphQL API endpoint for creating short links
 - `created_at`
 - `updated_at`
 
-Examples:
+## Examples:
 
 ![Screenshot from 2023-08-15 10-08-58](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/7fe769c4-4438-4b66-8ea8-6251d286f8a4)
 
