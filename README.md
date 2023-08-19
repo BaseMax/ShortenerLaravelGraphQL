@@ -1,4 +1,6 @@
-![Screenshot from 2023-08-15 10-40-05](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/44795a12-1026-4945-810f-f9d427a2dffe)# URL Shortener Laravel GraphQL
+![URL Shortener Laravel GraphQL](https://github.com/BaseMax/ShortenerLaravelGraphQL/assets/107758775/44795a12-1026-4945-810f-f9d427a2dffe)
+
+# URL Shortener Laravel GraphQL
 
 ShortenerLaravelGraphQL is a GraphQL-based web service developed using PHP 8.2 and Laravel 10. This project aims to provide a URL shortening service with a GraphQL API interface, making it easy to create short links and retrieve original URLs using GraphQL queries.
 
